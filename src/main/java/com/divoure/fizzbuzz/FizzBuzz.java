@@ -10,6 +10,9 @@ public class FizzBuzz {
     private final int number;
 
     public FizzBuzz(int input) {
+        if (input == Integer.MIN_VALUE) {
+            throw new ArithmeticException();
+        }
         this.number = Math.abs(input);
     }
 

@@ -3,6 +3,7 @@ package com.divoure.fizzbuzz;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
 class FizzBuzzTest {
@@ -52,5 +53,11 @@ class FizzBuzzTest {
     void minusNinetySevenShouldOutputNinetySeven() {
         FizzBuzz fizzBuzz = new FizzBuzz(-97);
         assertEquals("97", fizzBuzz.getResult());
+    }
+
+    // 2147483648 becomes -2147483648 due to int overflow and Math.abs cannot resolve it and returns -2147483648
+    @Test
+    void integerMaxValuePlusOneEqualsMinValueAndShouldThrowArithmeticException() {
+        assertThrows(ArithmeticException.class, () -> new FizzBuzz(Integer.MIN_VALUE));
     }
 }

@@ -10,9 +10,6 @@ public class FizzBuzzApp {
         Scanner scanner = new Scanner(System.in);
         try {
             int input = scanner.nextInt();
-            if (input == Integer.MIN_VALUE) {
-                throw new ArithmeticException();
-            }
             FizzBuzz fizzBuzz = new FizzBuzz(input);
             System.out.println(fizzBuzz.getResult());
         } catch (InputMismatchException | ArithmeticException e) {
