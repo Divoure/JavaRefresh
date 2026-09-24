@@ -1,6 +1,5 @@
 package com.divoure.interestcalculator;
 
-
 class InterestCalculatorApp {
     public static void main(String[] args) {
         UserInputHandler userInputHandler = new UserInputHandler();

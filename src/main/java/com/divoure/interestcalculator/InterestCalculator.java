@@ -21,8 +21,9 @@ public class InterestCalculator {
         this.interestRate = interestRate;
         this.term = term;
         this.interest = BigDecimal.valueOf(
-                this.principal * (this.interestRate / 100.0) * ((float) this.term / frequency)
-        ).setScale(2, RoundingMode.HALF_UP).doubleValue();
+                        this.principal * (this.interestRate / 100.0) * ((float) this.term / frequency))
+                .setScale(2, RoundingMode.HALF_UP)
+                .doubleValue();
     }
 
     public void logInterest() {

@@ -12,8 +12,7 @@ public class UserInputHandler {
         if (inputText.isBlank()) {
             System.out.println(inputLabel + " cannot be blank! Try again.");
         } else {
-            inputText = inputText.replace(
-                    ",", "").replace("€", "").replace("%", "");
+            inputText = inputText.replace(",", "").replace("€", "").replace("%", "");
             inputText = inputText.trim();
         }
         return inputText;
